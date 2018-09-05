@@ -1,22 +1,32 @@
 #Digitar três números e separa o númnero da esquerda, do meio e o da esquerda.
 
-#Usuário digita uma sequencia de trÊs números.
-numeros = int(input ("\nDigite uma sequencia de três números: "))
+lista_num = [1, 2, 3]
 
-#Faz a divisão por 100 para pegar o número da direita que representa a centena.
-num_Direita = numeros // 100
-#Faz o nódulo de 100 para descobrir quais são as dezenas.
-num_Meio = numeros % 100
-#Faz a divisão da váriavel num_Meio para ficar apenas com a dezena.
-num_Meio_Aux = num_Meio // 10
-#Faz o módulo de 10 para pegar o número da esquerda que representa a unidade.
-num_Esquerda = numeros % 10
+def num_direita():
+    direita_num = lista_num[0]
+    for indice_direita in lista_num:
+        if indice_direita > direita_num:
+            direita_num = indice_direita
+    return direita_num
 
-#Imprime o número digitado.
-print ("\nNumero digitado: ", numeros)
-#Imprimi o número da direita.
-print ("Número da direita: ", num_Direita)
-#Imprime o número do meio.
-print ("Número do meio: ", num_Meio_Aux)
-#Imprime o número da esquerda.
-print ("Número da esquerda: ", num_Esquerda)
+def num_esqueda():
+    esquerda_num = lista_num[0]
+    for indice_esquerda in lista_num:
+        if indice_esquerda < esquerda_num:
+            esquerda_num = indice_esquerda
+    return esquerda_num
+
+def num_meio():
+    direita_num = num_direita()
+    esquerda_num = num_esqueda()
+    i = 0
+    meio_num = lista_num[0]
+    while meio_num == direita_num or meio_num == esquerda_num:
+        i += 1
+        meio_num = lista_num[i]
+    return meio_num
+
+print ("Lista de números: ",str(lista_num).strip("[]"))
+print ("Número da direita: ", num_direita())
+print ("Número da esquerda: ", num_esqueda())
+print ("Número do meio: ", num_meio())
