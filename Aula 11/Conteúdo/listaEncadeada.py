@@ -3,6 +3,7 @@
 
 class No:
     """Define um no da lista encadeada."""
+
     def __init__(self, valor):
         """Inicializa no."""
         self.dado = valor
