@@ -2,7 +2,7 @@
 
 Funcionalidade: Remover elementos da lista encadeada.
 
-# Teste 6
+# Teste 1
 Cenario: Remover elementos de uma lista existente.
     Dado que existe uma lista com os numeros [1, 2, 3, 1, 2, 3, 1, 2, 3]
     Quando eu removo os elementos com valor 3

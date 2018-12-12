@@ -11,6 +11,10 @@ class No:
         self.anterior = None
         self.proximo = None
 
+    def dado(self):
+        """Retorna o valor do no."""
+        return self.dado
+
 
 class ListaDuplamenteEncadeada:
     """Define a lista encadeada."""
